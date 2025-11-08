@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Pages importantes
+Allow: /
+Allow: /programme-vea
+Allow: /gouvernance
+Allow: /formations
+Allow: /recherche
+Allow: /a-propos
+Allow: /contact
+
+# Fichiers à ne pas indexer
+Disallow: /api/
+Disallow: /assets/*.map
+
+# Sitemap
+Sitemap: https://aii-academie.org/sitemap.xml

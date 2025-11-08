@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply font-sans antialiased bg-white text-gray-900;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer components {
+  /* Smooth scroll behavior */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+
+  /* Selection color */
+  ::selection {
+    @apply bg-[#0095D9] text-white;
+  }
+
+  /* Focus styles */
+  button:focus-visible,
+  a:focus-visible {
+    @apply outline-2 outline-offset-2 outline-[#0095D9];
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Gradient text */
+  .gradient-text {
+    @apply bg-gradient-to-r from-[#0064B0] to-[#0095D9] bg-clip-text text-transparent;
+  }
+
+  /* Animation utilities */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out;
+  }
+
+  /* Custom shadows */
+  .shadow-unesco {
+    box-shadow: 0 4px 20px rgba(0, 149, 217, 0.15);
+  }
+
+  .shadow-unesco-lg {
+    box-shadow: 0 10px 40px rgba(0, 149, 217, 0.2);
+  }
+}
