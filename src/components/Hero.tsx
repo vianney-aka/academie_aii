@@ -2,7 +2,7 @@ import { HERO_CONTENT } from '../data/constants';
 
 const Hero = () => {
   return (
-    <section className="relative h-screen min-h-[600px] overflow-hidden bg-black -mt-[180px] pt-[180px]">
+    <section className="relative h-screen min-h-[600px] overflow-hidden bg-black -mt-[154px] pt-[154px]">
       {/* Background Image with Overlay */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import './styles/unesco-theme.css';
 
 @tailwind base;
 @tailwind components;
@@ -6,7 +7,7 @@
 
 @layer base {
   body {
-    @apply font-sans antialiased bg-white text-gray-900;
+    @apply font-sans antialiased bg-white text-unesco-dark;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
   
@@ -28,26 +29,26 @@
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+    @apply bg-unesco-gray-100;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-400 rounded-full;
+    @apply bg-unesco-gray-400 rounded-full;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-500;
+    @apply bg-unesco-gray-500;
   }
 
   /* Selection color */
   ::selection {
-    @apply bg-[#0095D9] text-white;
+    @apply bg-unesco-secondary text-white;
   }
 
   /* Focus styles */
   button:focus-visible,
   a:focus-visible {
-    @apply outline-2 outline-offset-2 outline-[#0095D9];
+    @apply outline-2 outline-offset-2 outline-unesco-secondary;
   }
 }
 
@@ -58,7 +59,7 @@
 
   /* Gradient text */
   .gradient-text {
-    @apply bg-gradient-to-r from-[#0064B0] to-[#0095D9] bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-unesco-primary to-unesco-secondary bg-clip-text text-transparent;
   }
 
   /* Animation utilities */
@@ -92,10 +93,10 @@
 
   /* Custom shadows */
   .shadow-unesco {
-    box-shadow: 0 4px 20px rgba(0, 149, 217, 0.15);
+    box-shadow: 0 4px 20px rgba(0, 100, 176, 0.15);
   }
 
   .shadow-unesco-lg {
-    box-shadow: 0 10px 40px rgba(0, 149, 217, 0.2);
+    box-shadow: 0 10px 40px rgba(0, 100, 176, 0.2);
   }
 }

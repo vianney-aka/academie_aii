@@ -1,0 +1,302 @@
+/* AII Theme Colors Variables */
+:root {
+  /* Couleurs principales AII */
+  --aii-primary: #0064B0;     /* Bleu principal AII */
+  --aii-secondary: #0095D9;    /* Bleu secondaire/hover */
+  --aii-dark: #1a1a1a;         /* Texte sombre */
+  
+  /* Compatible avec ancien nom UNESCO */
+  --unesco-primary: #0064B0;
+  --unesco-secondary: #0095D9;
+  --unesco-dark: #1a1a1a;
+  
+  /* Nuances de gris AII */
+  --unesco-gray-100: #f8f9fa;     /* Fond très clair */
+  --unesco-gray-200: #e9ecef;     /* Bordures claires */
+  --unesco-gray-300: #dee2e6;     /* Fond gris clair */
+  --unesco-gray-400: #ced4da;     /* Gris moyen */
+  --unesco-gray-500: #6c757d;     /* Texte gris */
+  --unesco-gray-600: #495057;     /* Texte gris foncé */
+  --unesco-gray-700: #343a40;     /* Fond sombre */
+  --unesco-gray-800: #212529;     /* Très sombre */
+  --unesco-gray-900: #0f0f0f;     /* Presque noir */
+  
+  /* Couleurs d'accent AII */
+  --unesco-red: #dc3545;          /* Pour alertes/erreurs */
+  --unesco-green: #28a745;        /* Pour succès */
+  --unesco-yellow: #ffc107;       /* Pour avertissements */
+  --unesco-pink: #e91e63;         /* Pour accent */
+}
+
+/* Classes utilitaires pour les couleurs AII */
+.bg-primary {
+  background-color: var(--unesco-primary);
+}
+
+.bg-secondary {
+  background-color: var(--unesco-secondary);
+}
+
+.text-primary {
+  color: var(--unesco-primary);
+}
+
+.text-secondary {
+  color: var(--unesco-secondary);
+}
+
+.border-primary {
+  border-color: var(--unesco-primary);
+}
+
+.border-secondary {
+  border-color: var(--unesco-secondary);
+}
+
+/* Styles de boutons AII */
+.btn-unesco-primary {
+  background-color: var(--unesco-primary);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 300ms;
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-unesco-primary:hover {
+  background-color: var(--unesco-secondary);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.btn-unesco-secondary {
+  background-color: white;
+  color: var(--unesco-primary);
+  border: 2px solid var(--unesco-primary);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.25rem;
+  transition: all 300ms;
+  display: inline-block;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.btn-unesco-secondary:hover {
+  background-color: var(--unesco-primary);
+  color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Styles de cartes AII */
+.card-unesco {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 300ms;
+}
+
+.card-unesco:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+.card-unesco-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-unesco-overlay::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--unesco-primary);
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.card-unesco-overlay:hover::after {
+  opacity: 0.9;
+}
+
+/* Styles de liens AII */
+.link-unesco {
+  color: var(--unesco-primary);
+  transition: color 200ms;
+  text-underline-offset: 2px;
+}
+
+.link-unesco:hover {
+  color: var(--unesco-secondary);
+  text-decoration: underline;
+}
+
+/* Styles de badges AII */
+.badge-unesco {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.badge-unesco-primary {
+  background-color: var(--unesco-primary);
+  color: white;
+}
+
+.badge-unesco-secondary {
+  background-color: var(--unesco-secondary);
+  color: white;
+}
+
+.badge-unesco-success {
+  background-color: var(--unesco-green);
+  color: white;
+}
+
+.badge-unesco-warning {
+  background-color: var(--unesco-yellow);
+  color: var(--unesco-dark);
+}
+
+.badge-unesco-danger {
+  background-color: var(--unesco-red);
+  color: white;
+}
+
+/* Section avec fond gris AII */
+.section-gray {
+  background-color: var(--unesco-gray-100);
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.section-dark {
+  background-color: var(--unesco-gray-800);
+  color: white;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+/* Input styles AII */
+.input-unesco {
+  border: 1px solid var(--unesco-gray-300);
+  border-radius: 0.25rem;
+  padding: 0.5rem 1rem;
+  transition: all 200ms;
+  width: 100%;
+}
+
+.input-unesco:focus {
+  outline: none;
+  border-color: var(--unesco-primary);
+  box-shadow: 0 0 0 3px rgba(0, 100, 176, 0.1);
+}
+
+/* Navigation active state */
+.nav-active {
+  color: var(--unesco-secondary);
+  border-bottom: 2px solid var(--unesco-secondary);
+  padding-bottom: 0.5rem;
+}
+
+/* Overlay gradient AII */
+.gradient-unesco {
+  background: linear-gradient(135deg, var(--unesco-primary) 0%, var(--unesco-secondary) 100%);
+}
+
+.gradient-unesco-dark {
+  background: linear-gradient(135deg, var(--unesco-dark) 0%, var(--unesco-gray-700) 100%);
+}
+
+/* Animation hover effet AII */
+@keyframes unesco-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 100, 176, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(0, 100, 176, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 100, 176, 0);
+  }
+}
+
+.unesco-pulse:hover {
+  animation: unesco-pulse 2s infinite;
+}
+
+/* Typography AII */
+.heading-unesco {
+  color: var(--unesco-dark);
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.text-muted {
+  color: var(--unesco-gray-500);
+}
+
+.text-body {
+  color: var(--unesco-gray-700);
+}
+
+/* Divider AII */
+.divider-unesco {
+  border-top: 1px solid var(--unesco-gray-200);
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* Alert styles AII */
+.alert-unesco {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alert-unesco-info {
+  background-color: rgba(0, 100, 176, 0.1);
+  color: var(--unesco-primary);
+  border: 1px solid rgba(0, 100, 176, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alert-unesco-success {
+  background-color: rgba(40, 167, 69, 0.1);
+  color: var(--unesco-green);
+  border: 1px solid rgba(40, 167, 69, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alert-unesco-warning {
+  background-color: rgba(255, 193, 7, 0.1);
+  color: var(--unesco-yellow);
+  border: 1px solid rgba(255, 193, 7, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.alert-unesco-danger {
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--unesco-red);
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+}

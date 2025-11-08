@@ -7,12 +7,14 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         {/* Logo Section at Top of Footer */}
         <div className="mb-12 pb-8 border-b border-gray-300">
-          <Link to="/" className="inline-block">
-            <img 
-              src="/logo.png" 
-              alt="Académie Internationale Interuniversitaire" 
-              className="h-20 hover:opacity-90 transition"
-            />
+          <Link to="/" className="inline-block group">
+            <div className="bg-white p-4 rounded-lg shadow-sm group-hover:shadow-md transition-all">
+              <img 
+                src="/logo.png" 
+                alt="Académie Internationale Interuniversitaire" 
+                className="h-28 hover:scale-105 transition-transform duration-300"
+              />
+            </div>
           </Link>
         </div>
 

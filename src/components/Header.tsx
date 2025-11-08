@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { NAVIGATION_LINKS } from '../data/constants';
-import MegaMenu from './MegaMenu';
+import MegaMenuAdvanced from './MegaMenuAdvanced';
 import DropdownMenu from './DropdownMenu';
 
 const Header = () => {
@@ -12,6 +11,24 @@ const Header = () => {
   const [isImpactOpen, setIsImpactOpen] = useState(false);
   const [isRessourcesOpen, setIsRessourcesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isHeaderHovered, setIsHeaderHovered] = useState(false);
+  
+  // Check localStorage for banner preference
+  const [isBannerClosed, setIsBannerClosed] = useState(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('bannerClosed') === 'true';
+    }
+    return false;
+  });
+
+  // Handle banner close
+  const handleCloseBanner = () => {
+    setIsBannerClosed(true);
+    // Save preference to localStorage
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('bannerClosed', 'true');
+    }
+  };
 
   // Detect scroll
   useEffect(() => {
@@ -25,56 +42,65 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-50 relative">
-      {/* Top Blue Banner - Hide on scroll */}
-      <div className={`bg-[#0064B0] text-white transition-all duration-300 ${isScrolled ? 'h-0 overflow-hidden' : 'py-3'} px-4`}>
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
-          <div className="flex items-center space-x-2 text-sm">
-            <span>Congrès Annuel de l'AII - Décembre 2025 - Inscriptions ouvertes</span>
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-            </svg>
+      {/* Top Blue Banner - Hide on scroll or when closed */}
+      <div 
+        className={`bg-aii-primary text-white overflow-hidden transition-all duration-500 ease-in-out ${
+          !isScrolled && !isBannerClosed ? 'max-h-20 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <div className="py-3 px-4">
+          <div className="max-w-7xl mx-auto">
+            <div className="flex items-center justify-between">
+              <a 
+                href="#" 
+                className="flex items-center space-x-3 text-sm hover:underline flex-1 group"
+              >
+                <span className="bg-white/20 px-2 py-0.5 rounded text-xs font-medium">NOUVEAU</span>
+                <span className="group-hover:underline">Congrès Annuel de l'AII - Décembre 2025 - Inscriptions ouvertes</span>
+                <svg className="w-4 h-4 flex-shrink-0 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </a>
+              <button 
+                onClick={handleCloseBanner}
+                className="text-white/80 hover:text-white transition-all p-1.5 hover:bg-white/10 rounded-full ml-4 group"
+                aria-label="Fermer l'annonce"
+                title="Fermer l'annonce"
+              >
+                <svg className="w-4 h-4 transition-transform group-hover:rotate-90" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
           </div>
-          <button className="text-white hover:text-gray-200">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-            </svg>
-          </button>
         </div>
       </div>
 
       {/* Main Header */}
-      <div className={`text-white transition-all duration-300 ${isScrolled ? 'bg-[#0064B0]' : 'bg-transparent hover:bg-[#0095D9]'}`}>
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          {/* Top Navigation Row */}
-          <div className={`group flex justify-between items-center transition-all duration-300 ${isScrolled ? 'py-3' : 'py-5 border-b border-white/10'}`}>
-            {/* Logo */}
-            <Link to="/" className="flex items-center">
-              <div className="flex items-center space-x-3 hover:opacity-90 transition">
-                <img 
-                  src="/logo.png" 
-                  alt="Académie Internationale Interuniversitaire" 
-                  className={`transition-all duration-300 ${isScrolled ? 'h-12' : 'h-16'}`}
-                />
-              </div>
-            </Link>
+      <div 
+        className={`transition-all duration-300 ${isScrolled || isHeaderHovered ? 'bg-aii-primary shadow-lg' : ''}`}
+        onMouseEnter={() => setIsHeaderHovered(true)}
+        onMouseLeave={() => setIsHeaderHovered(false)}
+      >
+        <div className="text-white">
+          <div className="max-w-7xl mx-auto px-6 lg:px-8">
+            {/* Top Navigation Row */}
+            <div className="flex justify-between items-center py-3">
+              {/* Logo */}
+              <Link to="/" className="flex items-center">
+                <div className="flex items-center hover:opacity-90 transition">
+                  <img 
+                    src="/logo.png" 
+                    alt="Académie Internationale Interuniversitaire" 
+                    className={`transition-all duration-300 ${isScrolled ? 'h-10' : 'h-12'}`}
+                  />
+                </div>
+              </Link>
 
-            {/* Primary Navigation */}
-            <nav className="hidden lg:flex items-center space-x-7 text-sm lg:text-[15px]">
-              {/* Hide most menu items when scrolled */}
-              {!isScrolled && (
-                <>
-                  <a href="#" className="hover:opacity-90 transition font-medium">Actualités</a>
-                  <a href="#" className="hover:opacity-90 transition font-medium">Événements</a>
-                  <a href="#" className="hover:opacity-90 transition font-medium">Partenariats</a>
-                  <a href="#" className="hover:opacity-90 transition font-medium">Gouvernance</a>
-                </>
-              )}
-              
-              {/* Always show "Liens utiles" text and icon */}
-              <div className="flex items-center space-x-2">
-                {!isScrolled && (
-                  <span className="text-white font-medium">Liens utiles</span>
-                )}
+            {/* Primary Navigation - Right side top menu */}
+            {isScrolled ? (
+              /* Scrolled state - Only show Liens utiles */
+              <nav className="hidden lg:flex items-center">
                 <button 
                   onClick={() => {
                     setIsMegaMenuOpen(true);
@@ -83,25 +109,54 @@ const Header = () => {
                     setIsImpactOpen(false);
                     setIsRessourcesOpen(false);
                   }}
-                  className="p-2 hover:opacity-90 rounded transition"
-                  aria-label="Ouvrir le menu liens utiles"
+                  className="flex items-center space-x-2 text-sm hover:opacity-80 transition"
                 >
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                  <span>Liens utiles</span>
+                  <svg 
+                    className="w-4 h-4" 
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                  >
                     <path d="M3 3h2v2H3V3zm0 4h2v2H3V7zm0 4h2v2H3v-2zm0 4h2v2H3v-2zm4-12h2v2h-2V3zm0 4h2v2h-2V7zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-12h2v2h-2V3zm0 4h2v2h-2V7zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
                   </svg>
                 </button>
-              </div>
-              
-              {/* Hide language selector when scrolled */}
-              {!isScrolled && (
-                <button className="flex items-center space-x-1.5 hover:opacity-90 transition font-medium">
-                  <span>Français</span>
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+              </nav>
+            ) : (
+              /* Default state - Show all navigation items */
+              <nav className="hidden lg:flex items-center space-x-6 text-[13px]">
+                <a href="#" className="hover:text-aii-secondary transition whitespace-nowrap">Espace Presse et Actualités</a>
+                <a href="#" className="hover:text-aii-secondary transition">Événements</a>
+                <a href="#" className="hover:text-aii-secondary transition">Partenariats</a>
+                <a href="#" className="hover:text-aii-secondary transition">Gouvernance</a>
+                <button 
+                  onClick={() => {
+                    setIsMegaMenuOpen(true);
+                    setIsAProposOpen(false);
+                    setIsExpertiseOpen(false);
+                    setIsImpactOpen(false);
+                    setIsRessourcesOpen(false);
+                  }}
+                  className="flex items-center hover:text-aii-secondary transition whitespace-nowrap"
+                >
+                  <span>Liens utiles</span>
+                  <svg 
+                    className="w-4 h-4 ml-1" 
+                    fill="currentColor" 
+                    viewBox="0 0 20 20"
+                  >
+                    <path d="M3 3h2v2H3V3zm0 4h2v2H3V7zm0 4h2v2H3v-2zm0 4h2v2H3v-2zm4-12h2v2h-2V3zm0 4h2v2h-2V7zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2zm4-12h2v2h-2V3zm0 4h2v2h-2V7zm0 4h2v2h-2v-2zm0 4h2v2h-2v-2z"/>
                   </svg>
                 </button>
-              )}
-            </nav>
+                <div className="flex items-center border-l border-white/30 pl-6">
+                  <button className="flex items-center space-x-1 hover:text-aii-secondary transition">
+                    <span>Français</span>
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                </div>
+              </nav>
+            )}
 
             {/* Mobile Menu Button */}
             <button
@@ -116,43 +171,160 @@ const Header = () => {
                 )}
               </svg>
             </button>
-          </div>
+            </div>
 
-          {/* Secondary Navigation Row - Main Menu Links */}
-          {!isScrolled && (
-            <div className="hidden lg:flex items-center justify-end space-x-7 py-4 text-sm lg:text-[15px]">
-              {NAVIGATION_LINKS.map((link) => (
-                <Link 
-                  key={link.href}
-                  to={link.href}
-                  className="hover:opacity-90 transition font-medium"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <button className="p-2 hover:opacity-90 rounded-full transition">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+            {/* Secondary Navigation Row - Dropdown Menu Links */}
+            {!isScrolled && (
+            <div className={`hidden lg:flex items-center justify-between pb-3 -mt-1 transition-all duration-300 ${isHeaderHovered ? 'border-b border-transparent' : 'border-b border-white'}`}>
+            {/* Empty space for alignment */}
+            <div className="flex-1"></div>
+            
+            {/* Menu items aligned to right */}
+            <div className="flex items-center space-x-8">
+              {/* À propos Dropdown */}
+              <button 
+                onClick={() => {
+                  setIsAProposOpen(!isAProposOpen);
+                  setIsExpertiseOpen(false);
+                  setIsImpactOpen(false);
+                  setIsRessourcesOpen(false);
+                  setIsMegaMenuOpen(false);
+                }}
+                className="flex items-center space-x-1.5 transition text-base font-medium hover:text-white/90"
+              >
+                <span>À propos</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Expertise Dropdown */}
+              <button 
+                onClick={() => {
+                  setIsExpertiseOpen(!isExpertiseOpen);
+                  setIsAProposOpen(false);
+                  setIsImpactOpen(false);
+                  setIsRessourcesOpen(false);
+                  setIsMegaMenuOpen(false);
+                }}
+                className="flex items-center space-x-1.5 transition text-base font-medium hover:text-white/90"
+              >
+                <span>Expertise</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Impact Dropdown */}
+              <button 
+                onClick={() => {
+                  setIsImpactOpen(!isImpactOpen);
+                  setIsAProposOpen(false);
+                  setIsExpertiseOpen(false);
+                  setIsRessourcesOpen(false);
+                  setIsMegaMenuOpen(false);
+                }}
+                className="flex items-center space-x-1.5 transition text-base font-medium hover:text-white/90"
+              >
+                <span>Impact</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
+              </button>
+
+              {/* Ressources Dropdown */}
+              <button 
+                onClick={() => {
+                  setIsRessourcesOpen(!isRessourcesOpen);
+                  setIsAProposOpen(false);
+                  setIsExpertiseOpen(false);
+                  setIsImpactOpen(false);
+                  setIsMegaMenuOpen(false);
+                }}
+                className="flex items-center space-x-1.5 transition text-base font-medium hover:text-white/90"
+              >
+                <span>Ressources</span>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
             </div>
-          )}
+
+            {/* Search button */}
+            <button className="p-2 hover:opacity-80 transition ml-8">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+            </button>
+            </div>
+            )}
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="lg:hidden bg-black/90 backdrop-blur-md text-white px-4 py-4 space-y-3 text-sm">
-          {NAVIGATION_LINKS.map((link) => (
-            <Link 
-              key={link.href}
-              to={link.href}
-              className="block py-2 hover:text-[#0095D9] transition"
-              onClick={() => setIsMenuOpen(false)}
+        <div className="lg:hidden bg-aii-primary text-white px-4 py-4 space-y-3 text-sm">
+          {/* Primary Navigation Items */}
+          <a href="#" className="block py-2 hover:text-aii-secondary transition">Espace Presse et Actualités</a>
+          <a href="#" className="block py-2 hover:text-aii-secondary transition">Événements</a>
+          <a href="#" className="block py-2 hover:text-aii-secondary transition">Partenariats</a>
+          <a href="#" className="block py-2 hover:text-aii-secondary transition">Gouvernance</a>
+          <button 
+            onClick={() => {
+              setIsMegaMenuOpen(true);
+              setIsMenuOpen(false);
+            }}
+            className="block w-full text-left py-2 hover:text-aii-secondary transition"
+          >
+            Liens utiles
+          </button>
+          
+          <div className="border-t border-white/20 pt-3">
+            {/* Dropdown Menu Items */}
+            <button 
+              onClick={() => {
+                setIsAProposOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className="block w-full text-left py-2 hover:text-aii-secondary transition"
             >
-              {link.label}
-            </Link>
-          ))}
+              À propos
+            </button>
+            <button 
+              onClick={() => {
+                setIsExpertiseOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className="block w-full text-left py-2 hover:text-aii-secondary transition"
+            >
+              Expertise
+            </button>
+            <button 
+              onClick={() => {
+                setIsImpactOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className="block w-full text-left py-2 hover:text-aii-secondary transition"
+            >
+              Impact
+            </button>
+            <button 
+              onClick={() => {
+                setIsRessourcesOpen(true);
+                setIsMenuOpen(false);
+              }}
+              className="block w-full text-left py-2 hover:text-aii-secondary transition"
+            >
+              Ressources
+            </button>
+          </div>
+          
+          <div className="border-t border-white/20 pt-3">
+            <button className="block w-full text-left py-2 hover:text-aii-secondary transition">
+              Français
+            </button>
+          </div>
         </div>
       )}
 
@@ -311,8 +483,8 @@ const Header = () => {
         ]}
       />
 
-      {/* MegaMenu Modal */}
-      <MegaMenu isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
+      {/* MegaMenu Advanced Modal */}
+      <MegaMenuAdvanced isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
     </header>
   );
 };
