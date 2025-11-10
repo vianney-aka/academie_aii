@@ -10,6 +10,13 @@ import Formations from './pages/Formations'
 import Recherche from './pages/Recherche'
 import APropos from './pages/APropos'
 import Contact from './pages/Contact'
+import QuiSommesNous from './pages/QuiSommesNous'
+import Education from './pages/Education'
+import Environnement from './pages/Environnement'
+import Culture from './pages/Culture'
+import Numerique from './pages/Numerique'
+import Ethique from './pages/Ethique'
+import EtatDeDroit from './pages/EtatDeDroit'
 
 function App() {
   return (
@@ -25,6 +32,13 @@ function App() {
           <Route path="/recherche" element={<Recherche />} />
           <Route path="/a-propos" element={<APropos />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/qui-sommes-nous" element={<QuiSommesNous />} />
+          <Route path="/education" element={<Education />} />
+          <Route path="/environnement" element={<Environnement />} />
+          <Route path="/culture" element={<Culture />} />
+          <Route path="/numerique" element={<Numerique />} />
+          <Route path="/ethique" element={<Ethique />} />
+          <Route path="/etat-de-droit" element={<EtatDeDroit />} />
         </Routes>
         <Footer />
         <ScrollToTop />

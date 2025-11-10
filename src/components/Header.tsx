@@ -355,6 +355,11 @@ const Header = () => {
             title: "Nos sites",
             imageUrl: "https://images.unsplash.com/photo-1569074187119-c87815b476da?w=600&h=400&fit=crop",
             link: "#sites"
+          },
+          {
+            title: "Qui sommes-nous",
+            imageUrl: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&h=400&fit=crop",
+            link: "/qui-sommes-nous"
           }
         ]}
       />
@@ -370,7 +375,7 @@ const Header = () => {
           {
             title: "Éducation",
             imageUrl: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&h=400&fit=crop",
-            link: "#education"
+            link: "/education"
           },
           {
             title: "Sciences exactes et naturelles",
@@ -385,7 +390,7 @@ const Header = () => {
           {
             title: "Culture",
             imageUrl: "https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=600&h=400&fit=crop",
-            link: "#culture"
+            link: "/culture"
           },
           {
             title: "Communication & Information",
@@ -406,6 +411,26 @@ const Header = () => {
             title: "Priorité Égalité des genres",
             imageUrl: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&h=400&fit=crop",
             link: "#egalite-genres"
+          },
+          {
+            title: "Environnement",
+            imageUrl: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop",
+            link: "/environnement"
+          },
+          {
+            title: "Numérique",
+            imageUrl: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&h=400&fit=crop",
+            link: "/numerique"
+          },
+          {
+            title: "Éthique",
+            imageUrl: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop",
+            link: "/ethique"
+          },
+          {
+            title: "État de Droit",
+            imageUrl: "https://images.unsplash.com/photo-1589994965851-a8f479c573a9?w=600&h=400&fit=crop",
+            link: "/etat-de-droit"
           }
         ]}
       />

@@ -40,13 +40,13 @@ const DropdownMenu = ({ isOpen, onClose, title, description, buttonText, buttonT
   return (
     <div 
       ref={dropdownRef}
-      className="absolute left-0 right-0 top-full bg-[#0095D9] shadow-2xl z-40 animate-fade-in"
+      className="absolute left-0 right-0 top-full bg-[#0095D9] shadow-2xl z-40 animate-slide-down"
     >
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 py-16 lg:py-20">
-        <div className="grid lg:grid-cols-[1fr_1.5fr] gap-16 lg:gap-20 items-start">
+      <div className="max-w-7xl mx-auto px-6 lg:px-12 py-12 lg:py-16">
+        <div className="grid lg:grid-cols-[1fr_1.8fr] gap-12 lg:gap-16 items-start">
           {/* Left: Text Content */}
-          <div className="text-white space-y-6">
-            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-snug tracking-tight">
+          <div className="text-white space-y-5 lg:pr-8">
+            <h2 className="text-2xl lg:text-3xl xl:text-4xl font-bold leading-tight tracking-tight">
               {title}
             </h2>
             {description && (
@@ -55,11 +55,11 @@ const DropdownMenu = ({ isOpen, onClose, title, description, buttonText, buttonT
               </p>
             )}
             {(buttonText || buttonText2) && (
-              <div className="flex flex-wrap gap-3 pt-2">
+              <div className="flex flex-wrap gap-3 pt-3">
                 {buttonText && (
                   <a 
                     href="#" 
-                    className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white text-sm lg:text-base px-5 lg:px-6 py-2.5 lg:py-3 rounded-full font-medium transition-all duration-200 hover:scale-105"
+                    className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white text-sm lg:text-base px-6 lg:px-7 py-3 lg:py-3.5 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <span>{buttonText}</span>
                   </a>
@@ -67,7 +67,7 @@ const DropdownMenu = ({ isOpen, onClose, title, description, buttonText, buttonT
                 {buttonText2 && (
                   <a 
                     href="#" 
-                    className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white text-sm lg:text-base px-5 lg:px-6 py-2.5 lg:py-3 rounded-full font-medium transition-all duration-200 hover:scale-105"
+                    className="inline-flex items-center bg-white/20 hover:bg-white/30 text-white text-sm lg:text-base px-6 lg:px-7 py-3 lg:py-3.5 rounded-full font-semibold transition-all duration-200 hover:scale-105 shadow-lg hover:shadow-xl"
                   >
                     <span>{buttonText2}</span>
                   </a>
@@ -77,24 +77,30 @@ const DropdownMenu = ({ isOpen, onClose, title, description, buttonText, buttonT
           </div>
 
           {/* Right: Cards Grid */}
-          <div className={`grid gap-3 lg:gap-4 ${cards.length <= 4 ? 'grid-cols-2' : 'grid-cols-2 lg:grid-cols-4'}`}>
+          <div className={`grid gap-4 ${
+            cards.length <= 4 
+              ? 'grid-cols-2 lg:grid-cols-2' 
+              : cards.length <= 6
+              ? 'grid-cols-2 lg:grid-cols-3'
+              : 'grid-cols-2 lg:grid-cols-4'
+          }`}>
             {cards.map((card, index) => (
               <a
                 key={index}
                 href={card.link}
-                className="group relative overflow-hidden rounded-xl aspect-video shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 hover:scale-105"
+                className="group relative overflow-hidden rounded-2xl aspect-[4/3] shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-[1.02] border border-white/10 hover:border-white/30"
               >
                 {/* Card Image */}
                 <div 
-                  className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+                  className="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105"
                   style={{ backgroundImage: `url(${card.imageUrl})` }}
                 >
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-black/20 group-hover:from-black/60 group-hover:via-black/30 group-hover:to-black/10 transition-all duration-300"></div>
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 group-hover:from-black/70 group-hover:via-black/40 group-hover:to-black/20 transition-all duration-300"></div>
                 </div>
 
                 {/* Card Title */}
-                <div className="relative h-full flex items-center justify-center p-3 lg:p-4">
-                  <h3 className="text-white text-center font-semibold text-xs lg:text-sm xl:text-base leading-tight drop-shadow-lg">
+                <div className="relative h-full flex items-center justify-center p-4 lg:p-5">
+                  <h3 className="text-white text-center font-bold text-sm lg:text-base xl:text-lg leading-tight drop-shadow-2xl tracking-wide">
                     {card.title}
                   </h3>
                 </div>
