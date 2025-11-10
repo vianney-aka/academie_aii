@@ -90,6 +90,131 @@ const Environnement = () => {
         </div>
       </section>
 
+      {/* Projets Pilotes Concrets */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Nos Projets Environnementaux en Action
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-green-50 to-green-100 p-8 rounded-2xl border-l-4 border-green-600">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-20 h-20 bg-green-600 rounded-full flex items-center justify-center text-white text-3xl mr-6">
+                  🌱
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <h3 className="text-2xl font-bold text-gray-900">Campus Verts AII</h3>
+                    <span className="ml-4 bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold">En cours</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Programme de transformation écologique de 12 campus universitaires partenaires : installation de panneaux solaires (500 kW total), systèmes de récupération d'eau de pluie, espaces verts pédagogiques, tri sélectif et compostage.
+                  </p>
+                  <div className="grid md:grid-cols-4 gap-4 mb-4">
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-green-600">12</div>
+                      <div className="text-sm text-gray-600">Campus engagés</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-green-600">-40%</div>
+                      <div className="text-sm text-gray-600">Émissions CO₂</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-green-600">500kW</div>
+                      <div className="text-sm text-gray-600">Énergie solaire</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-green-600">8,500</div>
+                      <div className="text-sm text-gray-600">Étudiants sensibilisés</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <strong>Universités participantes :</strong> UCAD (Sénégal), Univ. Yaoundé I (Cameroun), Univ. Ouagadougou (Burkina Faso)
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-2xl border-l-4 border-blue-600">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-20 h-20 bg-blue-600 rounded-full flex items-center justify-center text-white text-3xl mr-6">
+                  💧
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <h3 className="text-2xl font-bold text-gray-900">Observatoire Eau & Climat</h3>
+                    <span className="ml-4 bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold">2023-2026</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Réseau de recherche collaborative sur la gestion durable des ressources en eau en Afrique de l'Ouest. 8 universités, 45 chercheurs, base de données hydrologique régionale, modèles prédictifs climat.
+                  </p>
+                  <div className="grid md:grid-cols-4 gap-4 mb-4">
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-blue-600">8</div>
+                      <div className="text-sm text-gray-600">Universités réseau</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-blue-600">45</div>
+                      <div className="text-sm text-gray-600">Chercheurs mobilisés</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-blue-600">150K</div>
+                      <div className="text-sm text-gray-600">Données collectées</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-blue-600">22</div>
+                      <div className="text-sm text-gray-600">Publications</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <strong>Financement :</strong> Union Européenne (Horizon Europe) - Budget : 1,2M€
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-yellow-50 to-yellow-100 p-8 rounded-2xl border-l-4 border-yellow-600">
+              <div className="flex items-start">
+                <div className="flex-shrink-0 w-20 h-20 bg-yellow-600 rounded-full flex items-center justify-center text-white text-3xl mr-6">
+                  ♻️
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <h3 className="text-2xl font-bold text-gray-900">Programme Économie Circulaire</h3>
+                    <span className="ml-4 bg-yellow-600 text-white px-3 py-1 rounded-full text-sm font-bold">Pilote</span>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Formation-action sur l'économie circulaire pour étudiants et entrepreneurs : valorisation déchets plastiques, agriculture urbaine, upcycling, entrepreneuriat vert. 6 incubateurs universitaires lancés.
+                  </p>
+                  <div className="grid md:grid-cols-4 gap-4 mb-4">
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-yellow-600">6</div>
+                      <div className="text-sm text-gray-600">Incubateurs verts</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-yellow-600">320</div>
+                      <div className="text-sm text-gray-600">Étudiants formés</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-yellow-600">28</div>
+                      <div className="text-sm text-gray-600">Start-ups créées</div>
+                    </div>
+                    <div className="bg-white p-3 rounded-lg text-center">
+                      <div className="text-2xl font-bold text-yellow-600">15T</div>
+                      <div className="text-sm text-gray-600">Déchets valorisés</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <strong>Partenaires :</strong> PNUD, Agence Française de Développement, Ellen MacArthur Foundation
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Thématiques */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

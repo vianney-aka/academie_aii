@@ -90,6 +90,169 @@ const Education = () => {
         </div>
       </section>
 
+      {/* Programmes Académiques Spécifiques */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Programmes Académiques en Partenariat
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="bg-gradient-to-r from-blue-50 to-blue-100 p-8 rounded-2xl border-l-4 border-blue-600">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Master</span>
+                    <span className="text-gray-600">2 ans | 120 ECTS</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Master en Management de l'Enseignement Supérieur</h3>
+                  <p className="text-gray-600 mb-4">
+                    Programme conjoint avec l'Université Cheikh Anta Diop (Sénégal) et l'Université de Yaoundé I (Cameroun). Formation de futurs dirigeants d'institutions académiques en gouvernance, assurance qualité et stratégie universitaire.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Gouvernance Universitaire</span>
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Assurance Qualité</span>
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Politiques Éducatives</span>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    🎓 <strong>95 diplômés</strong> depuis 2021 | 📊 <strong>Taux d'insertion : 92%</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-green-50 to-green-100 p-8 rounded-2xl border-l-4 border-green-600">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Doctorat</span>
+                    <span className="text-gray-600">3-4 ans | Cotutelle internationale</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Programme Doctoral en Innovation Pédagogique</h3>
+                  <p className="text-gray-600 mb-4">
+                    Doctorats en cotutelle entre universités du réseau AII. Recherches sur les transformations de l'enseignement supérieur, l'innovation pédagogique, les technologies éducatives et les politiques universitaires en Afrique.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Pédagogie Numérique</span>
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Didactique Universitaire</span>
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Technologies Éducatives</span>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    🎓 <strong>45 thèses soutenues</strong> | 📚 <strong>120+ doctorants en cours</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-purple-50 to-purple-100 p-8 rounded-2xl border-l-4 border-purple-600">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center mb-4">
+                    <span className="bg-purple-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Licence</span>
+                    <span className="text-gray-600">3 ans | 180 ECTS</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3">Licence en Sciences de l'Éducation</h3>
+                  <p className="text-gray-600 mb-4">
+                    Programme mutualisé entre 10 universités partenaires avec modules communs et spécialisations locales. Formation initiale des futurs enseignants et spécialistes de l'éducation.
+                  </p>
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Psychopédagogie</span>
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Didactique</span>
+                    <span className="bg-white px-3 py-1 rounded-full text-sm text-gray-700">Société et Éducation</span>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    🎓 <strong>300+ étudiants inscrits</strong> | 📊 <strong>Taux de réussite : 87%</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partenariats Universitaires */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Nos Universités Partenaires d'Excellence
+            </h2>
+            <p className="text-xl text-gray-600">
+              Un réseau de 50+ institutions académiques de premier plan
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🇸🇳</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Université Cheikh Anta Diop</h3>
+              <p className="text-gray-600 text-sm mb-3">Dakar, Sénégal</p>
+              <p className="text-gray-600 text-sm">Partenaire fondateur. Cohébergement du Master en Management de l'Enseignement Supérieur et du Campus AII Dakar.</p>
+              <div className="mt-4 text-xs text-blue-600 font-semibold">Partenariat depuis 2020</div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🇨🇮</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Université Félix Houphouët-Boigny</h3>
+              <p className="text-gray-600 text-sm mb-3">Abidjan, Côte d'Ivoire</p>
+              <p className="text-gray-600 text-sm">Excellence en sciences exactes et naturelles. Accueil de doctorants AII en recherche collaborative et hôte du laboratoire d'innovation pédagogique.</p>
+              <div className="mt-4 text-xs text-green-600 font-semibold">Partenariat depuis 2021</div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🇨🇲</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Université de Yaoundé I</h3>
+              <p className="text-gray-600 text-sm mb-3">Yaoundé, Cameroun</p>
+              <p className="text-gray-600 text-sm">Pôle d'excellence en recherche scientifique. Coordination du Programme Doctoral en Innovation Pédagogique et formation méthodologique.</p>
+              <div className="mt-4 text-xs text-purple-600 font-semibold">Partenariat depuis 2020</div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🇲🇱</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Université des Sciences Sociales</h3>
+              <p className="text-gray-600 text-sm mb-3">Bamako, Mali</p>
+              <p className="text-gray-600 text-sm">Spécialisation en sciences humaines et sociales. Centre de ressources pédagogiques numériques et plateforme de formation à distance.</p>
+              <div className="mt-4 text-xs text-orange-600 font-semibold">Partenariat depuis 2021</div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🇨🇩</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Université de Kinshasa</h3>
+              <p className="text-gray-600 text-sm mb-3">Kinshasa, RD Congo</p>
+              <p className="text-gray-600 text-sm">Plus grande université francophone d'Afrique. Programmes de mobilité étudiante et échanges d'enseignants-chercheurs très actifs.</p>
+              <div className="mt-4 text-xs text-red-600 font-semibold">Partenariat depuis 2022</div>
+            </div>
+
+            <div className="bg-white p-6 rounded-xl shadow-md">
+              <div className="w-16 h-16 bg-indigo-100 rounded-full flex items-center justify-center mb-4">
+                <span className="text-2xl">🇫🇷</span>
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Université Paris-Saclay</h3>
+              <p className="text-gray-600 text-sm mb-3">Paris, France (Diaspora)</p>
+              <p className="text-gray-600 text-sm">Partenariat stratégique pour la formation doctorale, l'accueil de chercheurs africains et les projets de recherche de haut niveau.</p>
+              <div className="mt-4 text-xs text-indigo-600 font-semibold">Partenariat depuis 2023</div>
+            </div>
+          </div>
+
+          <div className="text-center mt-12">
+            <p className="text-gray-600 mb-4">Et 44 autres universités partenaires dans 15 pays</p>
+            <button className="bg-[#0095D9] hover:bg-[#0077B6] text-white px-8 py-3 rounded-full font-semibold transition">
+              Voir tous nos partenaires
+            </button>
+          </div>
+        </div>
+      </section>
+
       {/* Domaines d'Excellence */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -49,8 +49,224 @@ const Numerique = () => {
         </div>
       </section>
 
-      {/* Nos Solutions */}
+      {/* Plateformes Numériques Concrètes */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Nos Plateformes Numériques Déployées
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">🎓</div>
+              <h3 className="text-3xl font-bold mb-4">Campus AII LMS</h3>
+              <p className="text-white/90 mb-6">
+                Plateforme de gestion de l'apprentissage basée sur Moodle, personnalisée pour le réseau AII. Accessible 24/7 pour les étudiants, enseignants et administrateurs.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>35 universités connectées</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>12,000+ utilisateurs actifs</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>500+ cours en ligne disponibles</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Taux de satisfaction : 89%</span>
+                </div>
+              </div>
+              <button className="bg-white text-blue-600 px-6 py-3 rounded-full font-semibold hover:bg-blue-50 transition">
+                Accéder à Campus AII
+              </button>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-600 to-green-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">📹</div>
+              <h3 className="text-3xl font-bold mb-4">AII Classroom Pro</h3>
+              <p className="text-white/90 mb-6">
+                Solution de classe virtuelle synchrone utilisant Zoom Education avec fonctionnalités avancées : breakout rooms, enregistrement automatique, intégration LMS.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>1,200+ sessions par mois</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Jusqu'à 500 participants/session</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Enregistrements archivés (Cloud)</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Support technique 24/7</span>
+                </div>
+              </div>
+              <button className="bg-white text-green-600 px-6 py-3 rounded-full font-semibold hover:bg-green-50 transition">
+                Découvrir Classroom Pro
+              </button>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-600 to-purple-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">📚</div>
+              <h3 className="text-3xl font-bold mb-4">Bibliothèque Numérique AII</h3>
+              <p className="text-white/90 mb-6">
+                Accès centralisé à 50,000+ ressources académiques : livres, articles, thèses, revues scientifiques. Partenariats avec JSTOR, Cairn, Springer.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>50,000+ documents accessibles</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>8,500+ utilisateurs inscrits</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>200,000+ téléchargements/an</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Recherche avancée multicritères</span>
+                </div>
+              </div>
+              <button className="bg-white text-purple-600 px-6 py-3 rounded-full font-semibold hover:bg-purple-50 transition">
+                Explorer la bibliothèque
+              </button>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-600 to-orange-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">📊</div>
+              <h3 className="text-3xl font-bold mb-4">AII Analytics Dashboard</h3>
+              <p className="text-white/90 mb-6">
+                Tableau de bord pour le pilotage pédagogique : taux d'achèvement, engagement étudiant, résultats d'apprentissage, indicateurs de performance.
+              </p>
+              <div className="space-y-3 mb-6">
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Suivi en temps réel</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Rapports automatiques hebdomadaires</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Alertes prédictives (décrochage)</span>
+                </div>
+                <div className="flex items-center">
+                  <span className="mr-3">✔️</span>
+                  <span>Tableaux de bord personnalisables</span>
+                </div>
+              </div>
+              <button className="bg-white text-orange-600 px-6 py-3 rounded-full font-semibold hover:bg-orange-50 transition">
+                Voir le tableau de bord
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Cas d'Usage Concrets */}
       <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Témoignages et Cas d'Usage
+          </h2>
+          
+          <div className="space-y-8">
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex items-start">
+                <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                  <span className="text-2xl">🇸🇳</span>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <h3 className="text-xl font-bold text-gray-900">Université Cheikh Anta Diop</h3>
+                    <span className="ml-auto text-sm text-gray-500">Dakar, Sénégal</span>
+                  </div>
+                  <p className="text-gray-600 mb-4 italic">
+                    "Campus AII LMS nous a permis de maintenir la continuité pédagogique pendant la pandémie et de transformer durablement nos pratiques d'enseignement. Nos 3,500 étudiants accèdent désormais à 120 cours en ligne."
+                  </p>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <span className="font-semibold mr-2">Pr. Amadou Diallo</span>
+                    <span className="text-gray-500">| Vice-Recteur chargé du Numérique</span>
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">120 cours en ligne</span>
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">3,500 étudiants</span>
+                    <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-xs">85% taux de complétion</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex items-start">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                  <span className="text-2xl">🇨🇮</span>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <h3 className="text-xl font-bold text-gray-900">Université Félix Houphouët-Boigny</h3>
+                    <span className="ml-auto text-sm text-gray-500">Abidjan, Côte d'Ivoire</span>
+                  </div>
+                  <p className="text-gray-600 mb-4 italic">
+                    "La bibliothèque numérique AII a révolutionné l'accès aux ressources scientifiques pour nos chercheurs. Plus besoin de se déplacer en Europe pour consulter les revues indexeés !"
+                  </p>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <span className="font-semibold mr-2">Dr. Mariama Koffi</span>
+                    <span className="text-gray-500">| Directrice de la Recherche</span>
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">2,100+ chercheurs</span>
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">45,000 documents consultés</span>
+                    <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-xs">Gain de temps : 70%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg">
+              <div className="flex items-start">
+                <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mr-6 flex-shrink-0">
+                  <span className="text-2xl">🇨🇲</span>
+                </div>
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <h3 className="text-xl font-bold text-gray-900">Université de Yaoundé I</h3>
+                    <span className="ml-auto text-sm text-gray-500">Yaoundé, Cameroun</span>
+                  </div>
+                  <p className="text-gray-600 mb-4 italic">
+                    "AII Classroom Pro nous permet d'organiser des soutenances de thèse en visioconférence avec des jurys internationaux. La qualité audio-vidéo est excellente même avec une connexion limitée."
+                  </p>
+                  <div className="flex items-center text-sm text-gray-700">
+                    <span className="font-semibold mr-2">Pr. Jean-Marc Kouassi</span>
+                    <span className="text-gray-500">| Doyen de la Faculté des Sciences</span>
+                  </div>
+                  <div className="mt-4 flex flex-wrap gap-2">
+                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">85 soutenances en ligne</span>
+                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">Jurys de 15 pays</span>
+                    <span className="bg-purple-100 text-purple-800 px-3 py-1 rounded-full text-xs">100% satisfaits</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Nos Solutions */}
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
             Nos Solutions Numériques

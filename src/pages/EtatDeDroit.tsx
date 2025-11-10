@@ -176,32 +176,184 @@ const EtatDeDroit = () => {
         </div>
       </section>
 
-      {/* Partenariats */}
+      {/* Cliniques Juridiques */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Cliniques Juridiques Universitaires
+          </h2>
+          
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="bg-gradient-to-br from-slate-600 to-slate-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">⚖️</div>
+              <h3 className="text-3xl font-bold mb-4">Clinique Juridique AII Dakar</h3>
+              <p className="text-white/90 mb-6">
+                Première clinique juridique du réseau, créée en 2022 à l'Université Cheikh Anta Diop. Consultation gratuite, assistance juridique et formation pratique pour étudiants en droit.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center"><span className="mr-2">✓</span> 450+ consultations/an</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 65 étudiants formés</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 12 avocat(e)s superviseurs</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> Gratuit pour usagers</div>
+              </div>
+              <div className="text-sm text-white/80">📅 Lundi-Vendredi 9h-17h | 📍 Campus UCAD</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">🏡</div>
+              <h3 className="text-3xl font-bold mb-4">Clinique Juridique AII Abidjan</h3>
+              <p className="text-white/90 mb-6">
+                Lancée en 2024 à l'Université Félix Houphouët-Boigny. Spécialisation en droit des affaires, droit du travail et médiation familiale.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center"><span className="mr-2">✓</span> 280+ consultations/an</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 40 étudiants cliniciens</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> Partenariat Ordre des Avocats</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> Médiation pré-judiciaire</div>
+              </div>
+              <div className="text-sm text-white/80">📅 Mardi-Jeudi 10h-16h | 📍 Campus Cocody</div>
+            </div>
+          </div>
+
+          <div className="mt-8 bg-gray-50 p-8 rounded-2xl text-center">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">En développement</h3>
+            <p className="text-gray-600 mb-4">3 nouvelles cliniques juridiques prévues en 2025-2026</p>
+            <div className="flex justify-center gap-4 text-sm font-semibold">
+              <span className="bg-white px-4 py-2 rounded-full">🇨🇲 Yaoundé (2025)</span>
+              <span className="bg-white px-4 py-2 rounded-full">🇧🇫 Ouagadougou (2026)</span>
+              <span className="bg-white px-4 py-2 rounded-full">🇨🇩 Kinshasa (2026)</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Formations Certifiantes */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Formations Certifiantes en Droit
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-slate-600">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <span className="bg-slate-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Certificat</span>
+                    <h3 className="text-2xl font-bold text-gray-900">Droit des Droits Humains</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Formation avancée sur les instruments internationaux de protection des droits humains, les mécanismes de recours et le contentieux des droits fondamentaux. 120h sur 6 mois.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">👥 45 étudiants/promo</span>
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">📊 Taux réussite : 91%</span>
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">🎓 3 promos depuis 2022</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-blue-600">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">DU</span>
+                    <h3 className="text-2xl font-bold text-gray-900">Diplôme Universitaire en Médiation et Résolution des Conflits</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Formation professionnelle aux techniques de médiation, négociation et règlement amiable des différends. Certification reconnue par les ordres professionnels. 180h sur 10 mois.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">👥 30 participants/an</span>
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">📊 Insertion : 88%</span>
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">🎓 Lancé en 2023</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-2xl shadow-lg border-l-4 border-green-600">
+              <div className="flex items-start justify-between">
+                <div className="flex-1">
+                  <div className="flex items-center mb-3">
+                    <span className="bg-green-600 text-white px-3 py-1 rounded-full text-sm font-bold mr-3">Master</span>
+                    <h3 className="text-2xl font-bold text-gray-900">Master en Gouvernance Démocratique et État de Droit</h3>
+                  </div>
+                  <p className="text-gray-600 mb-4">
+                    Programme conjoint AII-Facultés de Droit. Formation pluridisciplinaire (droit, science politique, sociologie) sur les enjeux de la démocratie en Afrique. 2 ans, 120 ECTS.
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">👥 60 étudiants en cours</span>
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">📊 38 diplômés depuis 2021</span>
+                    <span className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm">🎓 5 universités partenaires</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Partenaires Détaillés */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
-              Nos Partenaires Institutionnels
+              Nos Partenaires Stratégiques
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Collaboration avec des organisations nationales et internationales pour renforcer l'État de droit
+              Collaboration avec des organisations de renom pour renforcer l'État de droit
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🌍 Organisations Internationales</h3>
-              <p className="text-gray-600">Nations Unies, Union Africaine, organisations régionales</p>
+          <div className="grid md:grid-cols-4 gap-6">
+            <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🌐</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">PNUD Afrique</h3>
+              <p className="text-sm text-gray-600">Programme gouvernance démocratique</p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🏛️ Institutions Juridiques</h3>
-              <p className="text-gray-600">Cours suprêmes, ordres professionnels, facultés de droit</p>
+            <div className="bg-gradient-to-br from-green-50 to-green-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🏛️</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Union Africaine</h3>
+              <p className="text-sm text-gray-600">Charte africaine droits de l'homme</p>
             </div>
 
-            <div className="bg-gray-50 p-6 rounded-xl">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">🤝 Société Civile</h3>
-              <p className="text-gray-600">ONGs de défense des droits humains et de la démocratie</p>
+            <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">⚖️</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Cour Africaine DDH</h3>
+              <p className="text-sm text-gray-600">Formation juges et greffiers</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-orange-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🇪🇺</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Union Européenne</h3>
+              <p className="text-sm text-gray-600">Soutien état de droit en Afrique</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-red-50 to-red-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">📚</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Commission Venise</h3>
+              <p className="text-sm text-gray-600">Expertise constitutionnelle</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-50 to-yellow-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🖊️</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Transparency Int.</h3>
+              <p className="text-sm text-gray-600">Lutte contre la corruption</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-indigo-50 to-indigo-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">📰</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">RSF</h3>
+              <p className="text-sm text-gray-600">Liberté de la presse</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-pink-50 to-pink-100 p-6 rounded-xl shadow-md text-center">
+              <div className="text-4xl mb-3">🤝</div>
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Amnesty Int.</h3>
+              <p className="text-sm text-gray-600">Défense droits humains</p>
             </div>
           </div>
         </div>

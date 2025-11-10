@@ -90,33 +90,119 @@ const Culture = () => {
         </div>
       </section>
 
-      {/* Initiatives Culturelles */}
+      {/* Projets Culturels Concrets */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
-            Initiatives Phares
+            Nos Projets Culturels en Action
           </h2>
           
-          <div className="space-y-6">
-            <div className="bg-gradient-to-r from-purple-500 to-pink-600 text-white p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-3">🌍 Atlas Culturel Africain</h3>
-              <p className="text-lg">
-                Cartographie interactive du patrimoine culturel matériel et immatériel du continent africain.
+          <div className="grid md:grid-cols-2 gap-8 mb-12">
+            <div className="bg-gradient-to-br from-purple-600 to-purple-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">🏛️</div>
+              <h3 className="text-3xl font-bold mb-4">Atlas du Patrimoine Universitaire Africain</h3>
+              <p className="text-white/90 mb-6">
+                Plateforme numérique répertoriant 3,500+ éléments du patrimoine matériel et immatériel de 25 universités africaines : archives, collections scientifiques, savoirs traditionnels, architecture.
               </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center"><span className="mr-2">✓</span> 25 universités documentées</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 3,500+ éléments patrimoniaux</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 450 fiches publiées</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> Accès gratuit et open source</div>
+              </div>
+              <div className="text-sm text-white/80">🌐 atlas-patrimoine.aii-academie.org</div>
             </div>
-            
-            <div className="bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-3">🎨 Festival des Arts Universitaires</h3>
-              <p className="text-lg">
-                Événement annuel réunissant artistes et étudiants pour célébrer la créativité africaine.
+
+            <div className="bg-gradient-to-br from-orange-600 to-orange-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">🎭</div>
+              <h3 className="text-3xl font-bold mb-4">Festival Interuniversitaire des Arts</h3>
+              <p className="text-white/90 mb-6">
+                Événement annuel itinérant : spectacles, expositions, conférences, masterclass. 2 éditions organisées (Dakar 2023, Abidjan 2024), prochaine à Yaoundé 2025.
               </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center"><span className="mr-2">✓</span> 120 artistes participants</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 5,000+ visiteurs/édition</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 15 pays représentés</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 30 spectacles présentés</div>
+              </div>
+              <div className="text-sm text-white/80">🎪 Prochaine édition : Yaoundé, 15-22 juin 2025</div>
             </div>
-            
-            <div className="bg-gradient-to-r from-pink-500 to-red-600 text-white p-8 rounded-xl">
-              <h3 className="text-2xl font-bold mb-3">📖 Bibliothèque Numérique du Patrimoine</h3>
-              <p className="text-lg">
-                Numérisation et mise en ligne de documents historiques, manuscrits anciens et archives culturelles.
+
+            <div className="bg-gradient-to-br from-blue-600 to-blue-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">📚</div>
+              <h3 className="text-3xl font-bold mb-4">Programme Numérisation Patrimoine</h3>
+              <p className="text-white/90 mb-6">
+                Numérisation de manuscrits anciens, thèses historiques, revues scientifiques, photos d'archives. Partenariat Internet Archive et BnF.
               </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center"><span className="mr-2">✓</span> 12,000 documents numérisés</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 450 manuscrits anciens</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 1,200 thèses de doctorat</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> Accès mondial garanti</div>
+              </div>
+              <div className="text-sm text-white/80">💰 Budget : 350,000€ (AFD + UNESCO)</div>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-600 to-green-800 text-white p-8 rounded-2xl">
+              <div className="text-5xl mb-4">🎓</div>
+              <h3 className="text-3xl font-bold mb-4">Chaires UNESCO Cultures Africaines</h3>
+              <p className="text-white/90 mb-6">
+                3 chaires UNESCO : Patrimoine Immatériel (Dakar), Arts Contemporains (Abidjan), Langues et Multilinguisme (Yaoundé). Enseignement, recherche et diffusion.
+              </p>
+              <div className="space-y-2 mb-6">
+                <div className="flex items-center"><span className="mr-2">✓</span> 3 chaires UNESCO actives</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 18 enseignants-chercheurs</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 80+ étudiants Master/Doctorat</div>
+                <div className="flex items-center"><span className="mr-2">✓</span> 45 publications scientifiques</div>
+              </div>
+              <div className="text-sm text-white/80">🤝 Partenaire officiel UNESCO (Secteur Culture)</div>
+            </div>
+          </div>
+
+          {/* Événements 2025 */}
+          <div className="bg-gray-50 p-8 rounded-2xl">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Agenda Culturel 2025</h3>
+            <div className="grid md:grid-cols-2 gap-4">
+              <div className="bg-white p-4 rounded-xl border-l-4 border-purple-600">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-sm font-bold text-purple-600">15-22 Juin</span>
+                    <h4 className="font-bold text-gray-900">Festival Arts Universitaires</h4>
+                    <p className="text-sm text-gray-600">Yaoundé, Cameroun</p>
+                  </div>
+                  <span className="text-2xl">🎭</span>
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border-l-4 border-blue-600">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-sm font-bold text-blue-600">5-7 Sept</span>
+                    <h4 className="font-bold text-gray-900">Colloque Patrimoine & Numérique</h4>
+                    <p className="text-sm text-gray-600">Dakar, Sénégal</p>
+                  </div>
+                  <span className="text-2xl">💻</span>
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border-l-4 border-orange-600">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-sm font-bold text-orange-600">20-25 Oct</span>
+                    <h4 className="font-bold text-gray-900">Semaine Cinéma Universitaire</h4>
+                    <p className="text-sm text-gray-600">Multi-campus</p>
+                  </div>
+                  <span className="text-2xl">🎥</span>
+                </div>
+              </div>
+              <div className="bg-white p-4 rounded-xl border-l-4 border-green-600">
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-sm font-bold text-green-600">10-12 Déc</span>
+                    <h4 className="font-bold text-gray-900">Forum Langues Africaines</h4>
+                    <p className="text-sm text-gray-600">Abidjan, Côte d'Ivoire</p>
+                  </div>
+                  <span className="text-2xl">🗣️</span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
