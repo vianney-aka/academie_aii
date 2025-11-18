@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import MegaMenuAdvanced from './MegaMenuAdvanced';
+import MegaMenuModern from './MegaMenuModern';
 import DropdownMenu from './DropdownMenu';
 
 const Header = () => {
@@ -508,8 +508,11 @@ const Header = () => {
         ]}
       />
 
-      {/* MegaMenu Advanced Modal */}
-      <MegaMenuAdvanced isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
+      {/* MegaMenu Modern - Nouveau design inspiré TailwindCSS */}
+      <MegaMenuModern isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} />
+      
+      {/* MegaMenu Advanced Modal - Ancien menu (commenté pour référence) */}
+      {/* <MegaMenuAdvanced isOpen={isMegaMenuOpen} onClose={() => setIsMegaMenuOpen(false)} /> */}
     </header>
   );
 };
