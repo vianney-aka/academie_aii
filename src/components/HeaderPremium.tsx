@@ -108,11 +108,11 @@ const HeaderPremium = () => {
             </Link>
 
             {/* Desktop Navigation */}
-            <div className="hidden lg:flex items-center space-x-1">
+            <div className="hidden lg:flex items-center space-x-2">
               {/* Accueil */}
               <Link
                 to="/"
-                className="px-4 py-2 text-white/90 hover:text-white font-medium transition-colors"
+                className="px-3 py-2 text-white/90 hover:text-white font-medium text-sm transition-colors"
               >
                 Accueil
               </Link>
@@ -129,16 +129,16 @@ const HeaderPremium = () => {
                           setIsMegaMenuOpen(true);
                           setActiveMegaMenuSection(item.megaMenuType || 'general');
                         }}
-                        className="flex items-center space-x-1 px-4 py-2 text-white/90 hover:text-white transition-colors"
+                        className="flex items-center space-x-1 px-3 py-2 text-white/90 hover:text-white font-medium text-sm transition-colors"
                       >
-                        <span className="font-medium">{item.label}</span>
+                        <span>{item.label}</span>
                         <ChevronDown className="w-4 h-4" />
                       </button>
                     </>
                   ) : (
                     <Link
                       to={item.path!}
-                      className="px-4 py-2 text-white/90 hover:text-white font-medium transition-colors"
+                      className="px-3 py-2 text-white/90 hover:text-white font-medium text-sm transition-colors"
                     >
                       {item.label}
                     </Link>
@@ -149,23 +149,28 @@ const HeaderPremium = () => {
 
             {/* Right Side Actions */}
             <div className="flex items-center space-x-3">
-              {/* Inscrivez-vous */}
-              <Link
-                to="/inscription"
-                className="hidden md:inline-flex items-center px-4 py-2
-                         text-white/90 hover:text-white font-medium transition-colors"
-              >
-                Inscrivez-vous
-              </Link>
+              {/* Separator */}
+              <div className="hidden md:block w-px h-6 bg-white/20 mx-2"></div>
 
               {/* Connectez-vous */}
               <Link
                 to="/connexion"
-                className="hidden md:inline-flex items-center px-4 py-2
-                         border border-white/30 text-white rounded-lg font-medium
+                className="hidden md:inline-flex items-center px-3 py-1.5
+                         border border-white/30 text-white rounded-lg font-medium text-sm
                          hover:bg-white/10 transition-all"
               >
                 Connectez-vous
+              </Link>
+
+              {/* Contact Button */}
+              <Link
+                to="/contact"
+                className="hidden md:inline-flex items-center px-4 py-1.5
+                         bg-gradient-to-r from-aii-primary to-aii-secondary
+                         text-white rounded-lg font-medium text-sm shadow-lg
+                         hover:shadow-xl hover:scale-105 transition-all"
+              >
+                Contact
               </Link>
 
               {/* Mobile Menu Button */}
@@ -185,12 +190,12 @@ const HeaderPremium = () => {
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="lg:hidden bg-slate-900/98 backdrop-blur-lg border-t border-slate-700/50">
-            <div className="max-w-7xl mx-auto px-6 py-6 space-y-3">
+          <div className="lg:hidden bg-slate-900 border-t border-slate-700/50">
+            <div className="max-w-7xl mx-auto px-4 py-5 space-y-1">
               {/* Accueil */}
               <Link
                 to="/"
-                className="block text-white font-medium py-2"
+                className="block text-white font-medium text-base py-3 px-4 rounded-lg hover:bg-white/10 transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Accueil
@@ -205,15 +210,15 @@ const HeaderPremium = () => {
                         setActiveMegaMenuSection(item.megaMenuType || 'general');
                         setIsMobileMenuOpen(false);
                       }}
-                      className="flex items-center justify-between w-full text-white font-medium py-2"
+                      className="flex items-center justify-between w-full text-white font-medium text-base py-3 px-4 rounded-lg hover:bg-white/10 transition-colors"
                     >
                       <span>{item.label}</span>
-                      <ChevronDown className="w-4 h-4" />
+                      <ChevronDown className="w-5 h-5" />
                     </button>
                   ) : (
                     <Link
                       to={item.path!}
-                      className="block text-white font-medium py-2"
+                      className="block text-white font-medium text-base py-3 px-4 rounded-lg hover:bg-white/10 transition-colors"
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
                       {item.label}
@@ -222,24 +227,28 @@ const HeaderPremium = () => {
                 </div>
               ))}
 
-              {/* Divider */}
-              <div className="border-t border-slate-700/50 my-4"></div>
-
-              {/* Auth Links */}
-              <Link
-                to="/inscription"
-                className="block text-white font-medium py-2"
-                onClick={() => setIsMobileMenuOpen(false)}
-              >
-                Inscrivez-vous
-              </Link>
+              {/* Separator */}
+              <div className="border-t border-white/20 my-4"></div>
 
               <Link
                 to="/connexion"
-                className="block text-white font-medium py-2"
+                className="flex items-center justify-center w-full px-6 py-4 mb-3
+                         bg-slate-800/80 text-white rounded-xl font-semibold text-base
+                         border border-slate-600/50 hover:bg-slate-700/80 transition-all"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Connectez-vous
+                🔐 Connectez-vous
+              </Link>
+
+              <Link
+                to="/contact"
+                className="flex items-center justify-center w-full px-6 py-4
+                         bg-gradient-to-r from-aii-primary to-aii-secondary
+                         text-white rounded-xl font-bold text-base shadow-lg
+                         hover:shadow-xl hover:scale-[1.02] transition-all"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                ✉️ Nous Contacter
               </Link>
             </div>
           </div>

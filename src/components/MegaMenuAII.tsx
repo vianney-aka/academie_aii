@@ -414,19 +414,20 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
       {/* Menu Panel */}
       <div 
         ref={menuRef}
-        className="fixed top-24 left-1/2 -translate-x-1/2 w-[95%] max-w-6xl 
-                   bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900
-                   rounded-2xl shadow-2xl z-50 overflow-hidden
-                   animate-[slideUp_0.4s_ease-out] border border-white/10"
+        className="fixed top-20 lg:top-24 left-0 lg:left-1/2 lg:-translate-x-1/2 
+                   w-full lg:w-[95%] lg:max-w-6xl h-[calc(100vh-80px)] lg:h-auto
+                   bg-slate-900 lg:bg-gradient-to-br lg:from-slate-900 lg:via-slate-800 lg:to-slate-900
+                   lg:rounded-2xl shadow-2xl z-50 overflow-hidden
+                   animate-[slideUp_0.4s_ease-out] lg:border lg:border-white/10"
       >
         {/* Header */}
-        <div className="bg-gradient-to-r from-aii-primary via-blue-600 to-aii-secondary p-6 md:p-8 relative overflow-hidden">
+        <div className="bg-gradient-to-r from-aii-primary via-blue-600 to-aii-secondary p-4 md:p-6 lg:p-8 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 animate-pulse" />
           <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24 animate-pulse" style={{ animationDelay: '1s' }} />
           
           <div className="relative flex items-center justify-between animate-[fadeIn_0.5s_ease-out_0.2s_both]">
             <div>
-              <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              <h2 className="text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2">
                 {activeSection === 'formations' ? 'Nos Formations' :
                  activeSection === 'elearning' ? 'Catalogue E-learning' :
                  'Académie Internationale Interuniversitaire'}
@@ -448,7 +449,7 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
         </div>
 
         {/* Mobile Categories Tabs */}
-        <div className="lg:hidden bg-slate-800/30 border-t border-slate-700/50 px-4 py-4 overflow-x-auto scrollbar-hide">
+        <div className="lg:hidden bg-slate-800/50 border-t border-slate-700/50 px-4 py-4 overflow-x-auto scrollbar-hide">
           <div className="flex space-x-3 min-w-max">
             {categories.map((cat, idx) => {
               const CatIcon = cat.icon;
@@ -456,12 +457,12 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
                 <button
                   key={cat.id}
                   onClick={() => setActiveCategory(cat.id)}
-                  className={`flex items-center space-x-2 px-5 py-3 rounded-xl text-sm font-medium 
-                    transition-all duration-300 whitespace-nowrap
+                  className={`flex items-center space-x-2 px-6 py-3.5 rounded-xl text-base font-medium 
+                    transition-all duration-300 whitespace-nowrap min-h-[48px]
                     animate-[slideIn_0.3s_ease-out_${idx * 0.1}s_both]
                     ${activeCategory === cat.id 
-                      ? 'bg-aii-primary text-white shadow-lg shadow-aii-primary/30 scale-105' 
-                      : 'bg-slate-700/50 text-slate-300 hover:bg-slate-700 active:scale-95'}`}
+                      ? 'bg-aii-primary text-white shadow-lg shadow-aii-primary/30' 
+                      : 'bg-slate-700/50 text-slate-300 active:bg-slate-600'}`}
                 >
                   <CatIcon className="w-5 h-5" />
                   <span>{cat.label}</span>
@@ -505,8 +506,8 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
           </div>
 
           {/* Content Grid */}
-          <div className="flex-1 p-6 md:p-8 max-h-[65vh] overflow-y-auto custom-scrollbar">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-5">
+          <div className="flex-1 p-4 md:p-6 lg:p-8 max-h-[calc(100vh-300px)] lg:max-h-[65vh] overflow-y-auto custom-scrollbar">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-5">
               {currentSections.map((section: MenuSection, index: number) => {
                 const Icon = section.icon;
                 const hasSubMenu = section.subMenu && section.subMenu.length > 0;
@@ -521,28 +522,29 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
                     {/* Main Card */}
                     <div
                       className="bg-slate-800/50 backdrop-blur-sm 
-                               border border-slate-700/50 rounded-xl p-6
-                               hover:bg-slate-700/60 hover:border-slate-600/80
-                               transition-all duration-300 hover:scale-[1.03]
-                               hover:shadow-2xl hover:shadow-aii-primary/30
-                               cursor-pointer"
+                               border border-slate-700/50 rounded-xl p-5 md:p-6
+                               active:bg-slate-700/60 md:hover:bg-slate-700/60 
+                               active:border-slate-600/80 md:hover:border-slate-600/80
+                               transition-all duration-300 md:hover:scale-[1.03]
+                               active:scale-[0.98] md:hover:shadow-2xl md:hover:shadow-aii-primary/30
+                               cursor-pointer min-h-[120px]"
                     >
                       <a href={section.link} onClick={onClose} className="block">
                         {/* Icon with gradient */}
-                        <div className={`w-14 h-14 rounded-xl bg-gradient-to-br ${section.color}
-                                      flex items-center justify-center mb-4
-                                      group-hover:scale-110 group-hover:rotate-3 
+                        <div className={`w-12 h-12 md:w-14 md:h-14 rounded-xl bg-gradient-to-br ${section.color}
+                                      flex items-center justify-center mb-3 md:mb-4
+                                      md:group-hover:scale-110 md:group-hover:rotate-3 
                                       transition-all duration-300
-                                      shadow-lg group-hover:shadow-2xl`}>
-                          <Icon className="w-7 h-7 text-white" />
+                                      shadow-lg md:group-hover:shadow-2xl`}>
+                          <Icon className="w-6 h-6 md:w-7 md:h-7 text-white" />
                         </div>
                         
                         {/* Title & Description */}
                         <h3 className="text-white font-semibold text-base md:text-lg mb-2 
-                                     group-hover:text-aii-secondary transition-colors leading-tight">
+                                     md:group-hover:text-aii-secondary transition-colors leading-tight">
                           {section.title}
                         </h3>
-                        <p className="text-slate-400 text-sm leading-relaxed">
+                        <p className="text-slate-400 text-sm md:text-base leading-relaxed line-clamp-2">
                           {section.description}
                         </p>
                       </a>
@@ -551,11 +553,11 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
                       {hasSubMenu && (
                         <button
                           onClick={() => setExpandedSection(isExpanded ? null : section.title)}
-                          className="lg:hidden flex items-center justify-between w-full mt-3 pt-3 border-t border-slate-700/50
-                                   text-aii-secondary text-sm font-medium hover:text-aii-primary transition-colors"
+                          className="lg:hidden flex items-center justify-between w-full mt-4 pt-4 border-t border-slate-700/50
+                                   text-aii-secondary text-base font-medium active:text-aii-primary transition-colors min-h-[44px]"
                         >
                           <span>Voir les détails</span>
-                          <ChevronRight className={`w-4 h-4 transition-transform ${isExpanded ? 'rotate-90' : ''}`} />
+                          <ChevronRight className={`w-5 h-5 transition-transform duration-300 ${isExpanded ? 'rotate-90' : ''}`} />
                         </button>
                       )}
 
@@ -570,16 +572,16 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
                     {/* SubMenu Dropdown (Mobile) */}
                     {hasSubMenu && isExpanded && section.subMenu && (
                       <div className="lg:hidden mt-3 bg-slate-800/95 backdrop-blur-sm border border-slate-700/50 
-                                    rounded-xl p-4 space-y-2 animate-[slideDown_0.3s_ease-out]">
+                                    rounded-xl p-4 space-y-1 animate-[slideDown_0.3s_ease-out]">
                         {section.subMenu.map((subItem: SubMenuItem, subIndex: number) => (
                           <a
                             key={subIndex}
                             href={subItem.link}
                             onClick={onClose}
-                            className="flex items-center space-x-2 text-slate-300 hover:text-white text-sm py-2 px-3
-                                     hover:bg-slate-700/50 rounded transition-colors"
+                            className="flex items-center space-x-3 text-slate-300 active:text-white text-base py-3 px-4
+                                     active:bg-slate-700/50 rounded-lg transition-colors min-h-[44px]"
                           >
-                            <ChevronRight className="w-3 h-3" />
+                            <ChevronRight className="w-4 h-4" />
                             <span>{subItem.title}</span>
                           </a>
                         ))}
@@ -622,7 +624,7 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
         </div>
 
         {/* Footer CTAs */}
-        <div className="bg-slate-800/90 backdrop-blur-sm border-t border-slate-700/50 p-6 md:p-8">
+        <div className="bg-slate-800/90 backdrop-blur-sm border-t border-slate-700/50 p-4 md:p-6 lg:p-8">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-4 md:gap-6">
             <div className="text-center sm:text-left animate-[fadeIn_0.5s_ease-out_0.6s_both]">
               <p className="text-white font-semibold text-base md:text-lg mb-1">
@@ -638,11 +640,11 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
               <a
                 href="/contact"
                 onClick={onClose}
-                className="flex items-center justify-center gap-2 px-8 py-3.5 w-full sm:w-auto
+                className="flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto min-h-[56px]
                          bg-gradient-to-r from-aii-primary to-aii-secondary
-                         text-white rounded-xl font-medium
+                         text-white rounded-xl font-semibold text-base
                          hover:shadow-xl hover:shadow-aii-primary/40
-                         transition-all duration-300 hover:scale-105 active:scale-95"
+                         transition-all duration-300 md:hover:scale-105 active:scale-95"
               >
                 <Mail className="w-5 h-5" />
                 Nous contacter
@@ -651,11 +653,11 @@ const MegaMenuAII = ({ isOpen, onClose, activeSection = 'general' }: MegaMenuAII
               <a
                 href="/about"
                 onClick={onClose}
-                className="flex items-center justify-center gap-2 px-8 py-3.5 w-full sm:w-auto
-                         bg-slate-700/80 text-white rounded-xl font-medium
+                className="hidden sm:flex items-center justify-center gap-2 px-8 py-4 w-full sm:w-auto min-h-[56px]
+                         bg-slate-700/80 text-white rounded-xl font-medium text-base
                          hover:bg-slate-600 transition-all duration-300
                          border border-slate-600/50 hover:border-slate-500
-                         hover:scale-105 active:scale-95"
+                         md:hover:scale-105 active:scale-95"
               >
                 En savoir plus
                 <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
